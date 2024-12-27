@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+       
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+       
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+      
+        h1 {
+            color: #4CAF50;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        
+        p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+     
+        .qr-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        
+        .qr-section div {
+            text-align: center;
+            width: 200px;
+            margin: 10px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+            position: relative;
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .qr-section div:hover {
+            background-color: #e0f7fa; /* Màu nền khi hover vào vùng chứa QR */
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .qr-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .qr-section img:hover {
+            transform: scale(1.1);
+        }
+
+        .qr-section h3 {
+            font-size: 20px;
+            color: #333;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        /* .qr-icon {
+            font-size: 30px;
+            color: #4CAF50;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        } */
+        .qr-iconfb {
+            font-size: 30px;
+            color: #106AFE;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+        .qr-icontk {
+            font-size: 30px;
+            color: #080808;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+        .qr-iconzl {
+            font-size: 30px;
+            color: #086AFF;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .qr-section div:hover .qr-icon {
+            color: #3a7d30;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            width: 180px;
+            background-color: #333;
+            color: black;
+            text-align: center;
+            padding: 8px;
+            border-radius: 6px;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 14px;
+        }
+
+        .qr-section div:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .back-home:hover {
+            background-color: #3a7d30;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Liên hệ</h1>
+        <p>Theo dõi chúng tôi trên mạng xã hội bằng cách quét mã QR bên dưới:</p>
+
+        <div class="qr-section">
+            <div>
+                <i class="fab fa-facebook qr-iconfb"></i>
+                <h3>Facebook</h3>
+                <img src="img/facebook.jpg" alt="Facebook QR Code">
+                <div class="tooltip">Quét mã QR để theo dõi chúng tôi trên Facebook!</div>
+            </div>
+            <div>
+                <i class="fab fa-tiktok qr-icontk"></i>
+                <h3>TikTok</h3>
+                <img src="img/tiktok.jpg" alt="TikTok QR Code">
+                <div class="tooltip">Quét mã QR để theo dõi chúng tôi trên TikTok!</div>
+            </div>
+            <div>
+                <i class="fab fa-weixin qr-iconzl"></i> <!-- Dùng icon "Weixin" cho Zalo -->
+                <h3>Zalo</h3>
+                <img src="img/zalo.jpg" alt="Zalo QR Code">
+                <div class="tooltip">Quét mã QR để theo dõi chúng tôi trên Zalo!</div>
+            </div>
+        </div>
+
+        <a href="index.php" class="back-home">Quay về trang chủ</a>
+    </div>
+
+</body>
+</html>
